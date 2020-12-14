@@ -9,11 +9,14 @@ const routes = require("./controllers/routes.js")
 
 const models = require("./models")
 models.sequelize.sync()
-const Items = models.items
+const budget = models.budget
 const Users = models.users
 
 app.listen(port, () => {
   console.log("listening on http://localhost:" + port)
 })
 
-routes.create(app, Items, Users)
+routes.create(app, budget, Users)
+
+//starts server - listen on end point for api request for front end
+// line 15 listens for requests, 19 routes them, according to routes.js

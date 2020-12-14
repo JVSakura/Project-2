@@ -1,21 +1,21 @@
-const itemsHandlers = require("./items_handlers.js")
+const budgetHandlers = require("./budget_handlers.js")
 const usersHandlers = require("./users_handlers.js")
 
-exports.create = (app, Items, Users) => {
+exports.create = (app, budget, Users) => {
 
   // CreateItem 
-  app.post("/api/items", (req, res) => {
-    itemsHandlers.createItem(req, res, Items)
+  app.post("/api/budget", (req, res) => {
+    budgetHandlers.createItem(req, res, budget)
   })
 
   // ListItems
-  app.get("/api/items", (req, res) => {
-    itemsHandlers.listItems(req, res, Items)
+  app.get("/api/budget", (req, res) => {
+    budgetHandlers.listItems(req, res, budget)
   })
 
   // DeleteItem 
-  app.delete("/api/items/:id", (req, res) => {
-    itemsHandlers.deleteItem(req, res, Items)
+  app.delete("/api/budget/:id", (req, res) => {
+    budgetHandlers.deleteItem(req, res, budget)
   })
 
   // Login

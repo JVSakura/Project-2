@@ -13,9 +13,10 @@
 
 <body>
   <nav class="navbar navbar-expand-lg my-nav">
-    <img id="wIYPLogo" src="https://cdn.discordapp.com/attachments/783457942455189570/786301168116170782/Transparent.png">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <img id="wIYPLogo"
+      src="https://cdn.discordapp.com/attachments/783457942455189570/786301168116170782/Transparent.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,22 +48,24 @@
       <hr>
       <form>
         <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
-          <input type="user" class="form-control" id="exampleInputUser1" aria-describedby="userHelp"
-            placeholder="Enter username">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="userHelp"
+            placeholder="Enter email...">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password...">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="submitLogin" type="submit" class="btn btn-primary">Submit</button>
         <hr>
         <a href="index.html"><button type="button" class="btn btn-primary btn-sm">Go Back</button></a>
       </form>
 
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/login.js"></script>
 </body>
 
 </html>

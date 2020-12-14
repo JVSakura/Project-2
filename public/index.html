@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/homepage.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -110,14 +110,31 @@
 
   <section class="section section-a">
     <div class="container">
+      <div id="countdown">
+        <h1> 🎄 Countdown until Christmas Day 🎄</h1>
+        <hr>
+        <div id="days"></div>
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+      </div>
+  </section>
+
+
+  <section class="section section-a">
+    <div class="container">
       <h1>About Us</h1>
       <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ducimus cum accusantium illum quis, facilis
-        dolorem. Aliquid alias illo magnam inventore possimus quibusdam, natus, tempora eligendi ipsam maxime, quis
-        laborum incidunt voluptates mollitia cumque sed. Quisquam ullam incidunt id obcaecati consequatur aliquam,
-        molestias, eveniet atque, dolor similique iure, vitae commodi corporis? Error tempore nemo, distinctio? Deserunt
-        repellat ex quo, nesciunt iusto provident iure, laudantium molestias, adipisci quis impedit? Excepturi,
-        repellat.</p>
+      <p>Welcome to What's In Your Pocket, Happy Holi-Pays!
+
+        This is a simple list-building and budgeting web application that's ideal for planning and organizing all of
+        your various holiday needs. With this
+        app you can create, edit, and delete lists for:
+
+        <li>Buying presents for friends and family</li>
+        <li>Tracking your holiday shopping and spending</li>
+        <li>and many more...</li>
+
     </div>
   </section>
   <br>
@@ -125,67 +142,39 @@
     <div class="container">
       <h1>Reviews</h1>
       <hr>
-      <p>5/5</p>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
-          aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-        </div>
-      </div>
-      <br>
-      <div class="container" id="quintCont">
-        <img id="quinton" src="./assets/images/Quinton.png" alt="Quinton.png" style="width:200px">
-        <br>
-        <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-        <p><span>Quinton</span></p>
-        <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-        <p><span>Hacker/Master Programmer</span></p>
-        <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-        <p>I saved so much cash using HoliPay, it's like it's snowing dolla bills!</p>
-      </div>
-    </div>
-    <hr>
-    <br>
-    <p>4/5</p>
-    <div class="progress">
-      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
-        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-      </div>
-    </div>
-    <br>
-    <div class="container" id="carlCont">
-      <img id="carlo" src="./assets/images/Carlo.png" alt="Carlo.png" style="width:200px">
-      <br>
-      <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
+      <img src="./assets/images/Carlo.png" alt="Carlo" style="width:200px">
       <p><span>Carlo</span></p>
-      <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-      <p><span>TA/Master Programmer</span></p>
-      <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-      <p>WIYP/HoliPay allowed me to save a ton during the holiday season and liquidate some frozen assets. I'm now rich
-        beyond my wildest dreams</p>
+      <p><span>Teaching Assistant</span></p>
+      <p>There's something about Christmas that's just magical. Money just seems to disappear into thin air. Thank you
+        What's In Your Pocket, by using your app I realize, it's not disappearing, it's getting deposited into the
+        pockets of the Target CEO.</p>
     </div>
-    <hr>
-    <br>
-    <p>5/5</p>
-    <div class="progress">
-      <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
-        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-      </div>
+
+    <div class="container">
+      <img src="./assets/images/Quinton.png" alt="Quinton" style="width:200px">
+      <p><span>Quinton</span></p>
+      <p><span>Teacher</span></p>
+      <p>I think as you grow older your Christmas list gets shorter, because all of the sudden all you really want is
+        free clothes and a copy of Cyberpunk. Thank you What's In Your Pocket for providing an app that keeps all my
+        other Christmas lists in order.</p>
     </div>
-    <br>
-    <div class="container" id="calCont">
-      <img id="calum" src="./assets/images/Calum.png" alt="Calum" style="width:200px">
-      <br>
-      <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
+
+    <div class="container">
+      <img src="./assets/images/Calum.png" alt="Calum" style="width:200px">
       <p><span>Calum</span></p>
-      <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-      <p><span>Hacking Genuis/Ex-TA</span></p>
-      <p>❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅❅</p>
-      <p>Used this app and found free money under my Christmas tree. 10/10 would reccomend.</p>
+      <p><span>Former Teaching Assistant... What Exactly Does He Even Do Now</span></p>
+      <p>Christmas is not an emergency, it doesn't sneak up on you. Lack of planning, when you have an application like
+        What's In Your Pocket,is not an excuse to use credit cards!... especially when you logged all your spending
+        money for the holidays.</p>
     </div>
-    <hr>
+
+    </div>
+    <div class="container">
+
   </section>
 
 
+  <script src="./assets/js/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

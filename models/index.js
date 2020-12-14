@@ -18,7 +18,7 @@ const models = {
     users: require("./users.js")(sequelize, Sequelize),
 }
 
-User.hasMany(Items)
-Items.belongsto(User)
+// User.hasMany(Items)
+// Items.belongsto(User)
 
 module.exports = models;

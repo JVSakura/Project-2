@@ -21,7 +21,7 @@ module. exports = (sequelize, Sequelize) => {
         createdAt: {
             type: Sequelize.DATE(3),
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)'),
-
+            field: 'created_at',
           },
           updatedAt: {
             type: Sequelize.DATE(3),

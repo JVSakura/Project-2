@@ -7,6 +7,9 @@ app.use(express.json())
 const port = 8000
 const routes = require("./controllers/routes.js")
 
+const cors = require('cors')
+app.use(cors())
+
 const models = require("./models")
 models.sequelize.sync()
 const Items = models.items

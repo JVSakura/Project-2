@@ -1,41 +1,50 @@
-body {
-  text-align: center;
-  background: #00ECB9;
-  font-family: sans-serif;
-  font-weight: 100;
+#countdown {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
-h1 {
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
+#countdown-subcontainer {
+    overflow: auto;
 }
 
-#clockdiv {
-  font-family: sans-serif;
-  color: #fff;
-  display: inline-block;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
+#countdown-header {
+    color: #222222;
+    font-family: "GothamBold";
+    font-size: 62px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-#clockdiv>div {
-  padding: 10px;
-  border-radius: 3px;
-  background: #00BF96;
-  display: inline-block;
+#countdown-subheader {
+    color: #222222;
+    font-family: "GothamBold";
+    font-size: 55px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    color: #EEEEEE;
+    background-color: #e80e53;
+    padding: 10px;
 }
 
-#clockdiv div>span {
-  padding: 15px;
-  border-radius: 3px;
-  background: #00816A;
-  display: inline-block;
+#countdown-timestamp {
+    color: #222222;
+    font-family: "GothamBold";
+    font-size: 70px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    width: 100%;
 }
 
-.smalltext {
-  padding-top: 5px;
-  font-size: 16px;
+#countdown-labels {
+    color: #999999;
+    font-family: "GothamBold";
+    font-size: 20px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }

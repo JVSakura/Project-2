@@ -1,0 +1,191 @@
+#dashboard {
+    z-index: 4;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background-color: #03fcca;
+    opacity: 0;
+}
+
+#dashboard-header {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+#dashboard-user {
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-family: "GothamBold";
+    font-size: 20px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+#dashboard-logout-btn {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#dashboard-budget {
+    height: 100%;
+}
+
+#dashboard-budget-overview {
+    overflow: auto;
+    clear: both;
+}
+
+#dashboard-budget-total {
+    float: left;
+    width: 50%;
+    text-align: center;
+    background-color: #222222;
+    color: #eeeeee;
+}
+
+#dashboard-budget-balance {
+    float: right;
+    width: 50%;
+    text-align: center;
+    background-color: #eeeeee;
+}
+
+.dashboard-overview {
+    font-family: "GothamBold";
+    font-size: 70px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #222222;
+}
+
+#dashboard-add-item-name {
+    width: 20%;
+}
+
+#dashboard-add-item-link {
+    width: 30%;
+}
+
+#dashboard-add-recipient-name {
+    width: 20%;
+}
+
+#dashboard-add-price {
+    width: 20%;
+}
+
+#dashboard-add-item-btn {
+    width: 10%;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #EEEEEE;
+    background-color: #222222;
+    border: none;
+    outline: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.dashboard-input {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid rgba(34, 34, 34, .5);
+    outline: none;
+    text-transform: uppercase;
+    color: #222222;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+#dashboard-divider {
+    height: 1px;
+    background-color: #222222;
+    opacity: .5;
+}
+
+.dashboard-input::placeholder {
+    color: #222222;
+    opacity: .5;
+}
+
+#dashboard-items {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.dashboard-item {
+    background-color: #222222;
+    margin-bottom: 1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dashboard-item-subcontainer {
+    overflow: auto;
+    clear: both;
+}
+
+.dashboard-item-name {
+    float: left;
+    font-size: 14px;
+    width: 20%;
+    color: #EEEEEE;
+    text-transform: uppercase;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.dashboard-item-link {
+    float: left;
+    width: 30%;
+    margin-left: 10px;
+}
+
+a:link {
+    font-size: 14px;
+    color: #03fcca;
+    text-transform: uppercase;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.dashboard-item-recipient {
+    float: left;
+    font-size: 14px;
+    width: 20%;
+    color: #eeeeee;
+    text-transform: uppercase;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.dashboard-item-price {
+    float: left;
+    font-size: 14px;
+    width: 20%;
+    color: #eeeeee;
+    text-transform: uppercase;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+}

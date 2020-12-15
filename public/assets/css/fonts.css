@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: GothamBlack;
+    src: url(../fonts/GothamBlack.woff);
+}
+
+@font-face {
+    font-family: GothamBold;
+    src: url(../fonts/GothamBold.woff);
+}
+
+@font-face {
+    font-family: GothamMedium;
+    src: url(../fonts/GothamMedium.woff);
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url(../fonts/GothamLight.woff);
+}

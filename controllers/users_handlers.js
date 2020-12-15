@@ -13,6 +13,7 @@ exports.login = async (req, res, Users) => {
     } catch (err) {
         console.log(err)
 
+        res.status(500)
         res.send({
         code: 500,
         status: "Internal Server Error",
@@ -23,6 +24,7 @@ exports.login = async (req, res, Users) => {
 
     // Handle failure
     if (user == null) {
+        res.status(401)
         res.send({
             code: 401,
             status: "Unauthorized",
@@ -32,6 +34,7 @@ exports.login = async (req, res, Users) => {
     }
 
     // Handle success
+    res.status(200)
     res.send({
         user: user,
     })
@@ -55,6 +58,7 @@ exports.createUser = async (req, res, Users) => {
     } catch(err) {
         console.log(err)
 
+        res.status(500)
         res.send({
         code: 500,
         status: "Internal Server Error",
@@ -64,6 +68,7 @@ exports.createUser = async (req, res, Users) => {
     }
 
     // Handle success
+    res.status(200)
     res.send({
         code: 200,
         status: "Ok",

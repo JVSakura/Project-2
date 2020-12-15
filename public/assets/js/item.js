@@ -15,7 +15,7 @@ class Item {
 
         this.itemLink = document.createElement("div")
         this.itemLink.className = "dashboard-item-link"
-        this.itemLink.innerHTML = "<a href='" + item.link + "'>View Item</a>"
+        this.itemLink.innerHTML = "<a href='" + item.link + "' target='_blank'>View Item</a>"
         this.subContainer.appendChild(this.itemLink)
 
         this.itemRecipient = document.createElement("div")

@@ -13,6 +13,9 @@ exports.validateCreateItemRequest = (body) => {
     if (body.userId == null || isNaN(body.userId)) {
         errs += "invalid user id "
     }
+    if (body.recipient == null || body.recipient == "") {
+        errs += "invalid recipient "
+    }
     if (errs.length > 0) {
         throw new Error(errs)
     }

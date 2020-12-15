@@ -14,6 +14,10 @@ module. exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: false,
         },
+        recipient: {
+            type: Sequelize.STRING,
+            allowNull: false,
+        },
         price: {
             type: Sequelize.FLOAT,
             allowNull: false,

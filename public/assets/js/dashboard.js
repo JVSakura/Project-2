@@ -102,13 +102,15 @@ class Dashboard {
             })
 
             // Add the item to the db
-            axios.post("http://localhost:8000/api/items", {
+            const newItem = {
                 name: this.itemName.value,
                 link: this.itemLink.value,
                 recipient: this.recipientName.value,
                 price: this.price.value,
                 userId: this.user.id,
-            })
+            }
+            console.log("new-item: " + newItem)
+            axios.post("http://localhost:8000/api/items", newItem)
             .then(res => {
                 console.log(res)
             })
@@ -116,11 +118,15 @@ class Dashboard {
                 console.log(err)
             })
 
+            this.balanceValue += this.price.value
+            let b = this.budgetValue - this.balanceValue 
+            this.balance.innerHTML = "$" + b
+            
              // Reset input fields
              this.itemName.value = ""
              this.itemLink.value = ""
              this.recipientName.value = ""
-             this.price.value = ""
+             this.price.value = 0
         }
 
         this.logoutBtn.onclick = (e) => {
@@ -141,5 +147,25 @@ class Dashboard {
         this.user = user;
         this.total.innerHTML = "$" + user.budget;
         this.userName.innerHTML = user.firstName + " " + user.lastName
+
+        axios.get("http://localhost:8000/api/items")
+        .then(res => {
+            console.log(res)
+            for (let i = 0; i < res.data.items.length; i++) {
+                const itemObj = res.data.items[i]
+                const item = new Item(this.itemsSubContainer, {
+                    name: itemObj.name,
+                    link: itemObj.link,
+                    recipient: itemObj.recipient,
+                    price: itemObj.price,
+                })
+                this.balanceValue += itemObj.price
+            }
+            let balance = this.budgetValue - this.balanceValue
+            this.balance.innerHTML = "$" + balance
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 }

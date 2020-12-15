@@ -24,6 +24,7 @@
     font-size: 20px;
     letter-spacing: -2px;
     text-transform: uppercase;
+    color: #222222;
 }
 
 #dashboard-logout-btn {
@@ -160,6 +161,15 @@
 }
 
 a:link {
+    font-size: 14px;
+    color: #03fcca;
+    text-transform: uppercase;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+a:visited {
     font-size: 14px;
     color: #03fcca;
     text-transform: uppercase;

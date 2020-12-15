@@ -66,6 +66,7 @@ exports.createItem = async (req, res, Items) => {
       link: req.body.link,
       price: req.body.price,
       userId: req.body.userId,
+      recipient: req.body.recipient,
     })
 
   } catch(err) {
@@ -92,6 +93,7 @@ exports.createItem = async (req, res, Items) => {
       link: req.body.link,
       price: req.body.price,
       userId: req.body.userId,
+      recipient: req.body.recipient,
     }
   })
 

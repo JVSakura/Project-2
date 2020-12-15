@@ -19,7 +19,7 @@ exports.create = (app, Items, Users) => {
   })
 
   // Login
-  app.get("/api/login", (req, res) => {
+  app.post("/api/login", (req, res) => {
     usersHandlers.login(req, res, Users)
   })
 

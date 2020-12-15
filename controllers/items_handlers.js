@@ -8,9 +8,10 @@ exports.createItem = async (req, res, Items) => {
 
     helpers.validateCreateItemRequest(req.body)
 
-  } catch (e) {
+  } catch (err) {
     console.log(err)
 
+    res.status(400)
     res.send({
     code: 400,
     status: "Bad Request",
@@ -33,6 +34,7 @@ exports.createItem = async (req, res, Items) => {
   } catch (err) {
     console.log(err)
 
+    res.status(500)
     res.send({
       code: 500,
       status: "Internal Server Error",
@@ -45,6 +47,7 @@ exports.createItem = async (req, res, Items) => {
   if (existingItem != null) {
     console.log("item already exists")
 
+    res.status(409)
     res.send({
       code: 409,
       status: "Conflict",
@@ -60,13 +63,16 @@ exports.createItem = async (req, res, Items) => {
 
     createRes = await Items.create({
       name: req.body.name,
-      description: req.body.description,
+      link: req.body.link,
       price: req.body.price,
+      userId: req.body.userId,
+      recipient: req.body.recipient,
     })
 
   } catch(err) {
     console.log(err)
 
+    res.status(500)
     res.send({
       code: 500,
       status: "Internal Server Error",
@@ -76,6 +82,7 @@ exports.createItem = async (req, res, Items) => {
   }
 
   // Handle success
+  res.status(200)
   res.send({
     code: 200,
     status: "Ok",
@@ -83,8 +90,10 @@ exports.createItem = async (req, res, Items) => {
     item: {
       id: createRes.id,
       name: req.body.name,
-      description: req.body.description,
+      link: req.body.link,
       price: req.body.price,
+      userId: req.body.userId,
+      recipient: req.body.recipient,
     }
   })
 
@@ -103,6 +112,7 @@ exports.listItems = async (req, res, Items) => {
   } catch (err) {
       console.log(err)
 
+      res.status(500)
       res.send({
       code: 500,
       status: "Internal Server Error",
@@ -112,6 +122,7 @@ exports.listItems = async (req, res, Items) => {
   }
 
   // Handle success
+  res.status(200)
   res.send({
       code: 200,
       status: "Ok",
@@ -135,6 +146,7 @@ exports.deleteItem = async (req, res, Items) => {
   } catch (err) {
       console.log(err)
 
+      res.status(500)
       res.send({
       code: 500,
       status: "Internal Server Error",
@@ -144,6 +156,7 @@ exports.deleteItem = async (req, res, Items) => {
   }
 
   // Handle success
+  res.status(200)
   res.send({
       code: 200,
       status: "Ok",

@@ -10,13 +10,22 @@ module. exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: false,
         },
-        description: {
+        link: {
+            type: Sequelize.STRING,
+            allowNull: false,
+        },
+        recipient: {
             type: Sequelize.STRING,
             allowNull: false,
         },
         price: {
             type: Sequelize.FLOAT,
             allowNull: false,
+        },
+        userId: {
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            field: 'user_id',
         },
         createdAt: {
             type: Sequelize.DATE(3),

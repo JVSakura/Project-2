@@ -1,0 +1,44 @@
+body {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    background-color: #EEEEEE;
+    background-image: radial-gradient(#dddddd 5%, transparent 5%);
+    background-position: 0 0, 15px 15px;
+    background-size: 30px 30px;
+}
+
+#header {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    clear: both;
+}
+
+#login-btn {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #DDDDDD;
+    font-family: "GothamLight";
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #222222;
+}
+

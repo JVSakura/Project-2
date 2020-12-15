@@ -1,43 +1,39 @@
-function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+class Countdown {
 
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds
-  };
-}
+    constructor(container) {
+        console.log("Countdown")
 
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-  const daysSpan = clock.querySelector('.days');
-  const hoursSpan = clock.querySelector('.hours');
-  const minutesSpan = clock.querySelector('.minutes');
-  const secondsSpan = clock.querySelector('.seconds');
+        const element = document.createElement("div")
+        element.id = "countdown"
+        container.appendChild(element)
 
-  function updateClock() {
-    const t = getTimeRemaining(endtime);
+        const subContainer = document.createElement("div")
+        subContainer.id = "countdown-subcontainer"
+        element.appendChild(subContainer)
 
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        const header = document.createElement("div")
+        header.id = "countdown-header"
+        header.innerHTML = "Countdown"
+        subContainer.appendChild(header)
 
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
+        const subheader = document.createElement("span")
+        subheader.id = "countdown-subheader"
+        subheader.innerHTML = "To Christmas"
+        subContainer.appendChild(subheader)
+
+        const timestamp = document.createElement("div")
+        timestamp.id = "countdown-timestamp"
+        timestamp.innerHTML = "00:00:00:00"
+        subContainer.appendChild(timestamp)
+
+        const labels = document.createElement("div")
+        labels.id = "countdown-labels"
+        labels.innerHTML = "days : hours : minutes : seconds"
+        subContainer.appendChild(labels)
+
+        V.add((w, h, sw) => {
+            subContainer.style.marginTop = (h - subContainer.clientHeight)/2 + "px"
+        })
     }
-  }
 
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
 }
-
-const deadline = new Date(Date.parse(new Date()) + 16 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
-

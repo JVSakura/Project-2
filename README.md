@@ -9,7 +9,7 @@
   <a href="">Stefany Sanchez</a> , <a href="https://github.com/nicouva">Nicole Uva</a> , <a href="https://github.com/CP-1998">Christian Parks</a> , <a href="https://github.com/Vialoraine">Vialoreina Salalila</a> & <a href="https://github.com/JVSakura">James Vasquez</a>
 
   ## Screenshots:
-  <img src="img/budget.jpg" alt="screenshot" width="800" height="400">
+  <img src="../img/budget.jpg" alt="screenshot" width="800" height="400">
   <img src="img/countdown.jpg" alt="screenshot" width="800" height="400">
   <img src="img/login.jpg" alt="screenshot" width="800" height="400">
 

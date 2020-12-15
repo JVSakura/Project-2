@@ -6,7 +6,7 @@
  
   ## Contributors: 
 
-  <a href="">Stefany Sanchez</a> , <a href="https://github.com/nicouva">Nicole Uva</a> , <a href="https://github.com/CP-1998">Christian Parks</a> & <a href="https://github.com/Vialoraine">Vialoreina Salalila</a> <a href="https://github.com/JVSakura">James Vasquez</a>
+  <a href="">Stefany Sanchez</a> , <a href="https://github.com/nicouva">Nicole Uva</a> , <a href="https://github.com/CP-1998">Christian Parks</a> , <a href="https://github.com/Vialoraine">Vialoreina Salalila</a> & <a href="https://github.com/JVSakura">James Vasquez</a>
 
   ## Screenshots:
 

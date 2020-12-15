@@ -31,8 +31,18 @@ class Countdown {
         labels.innerHTML = "days : hours : minutes : seconds"
         subContainer.appendChild(labels)
 
+        const xmas = Date.parse("December 25, 2020");
+        setInterval((e) => {
+            const total = xmas - Date.parse(new Date());
+            const seconds = Math.floor((total / 1000) % 60);
+            const minutes = Math.floor((total / 1000 / 60) % 60);
+            const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(total / (1000 * 60 * 60 * 24));
+            timestamp.innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds
+        }, 1000)
+
         V.add((w, h, sw) => {
-            subContainer.style.marginTop = (h - subContainer.clientHeight)/2 + "px"
+            subContainer.style.marginTop = (h - subContainer.clientHeight) / 2 + "px"
         })
     }
 
